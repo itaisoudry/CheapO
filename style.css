@@ -9,20 +9,16 @@
   right: 0;
 }
 
-#pickOne{
-  width: 290px;
-  float: right;
-  margin-left: 200px;
-  margin-right: 100px;
-}
-#pickTwo{
-  width: auto;
-  float: right;
-  margin-left: 200px;
+.row{
+
+  background-color: green;
+  margin:auto;
 
 }
-#pickThree
-{
-  width: auto;
-  float: right;
+.header{
+  margin-bottom: 200px;
+  text-align: center;
+}
+#colOne{
+margin: auto;
 }
