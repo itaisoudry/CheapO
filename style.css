@@ -1,22 +1,21 @@
-.centered
-{
-  background-color: green;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.bootstrap-select {
+  background-clip: border-box;
+  text-align-last: right;
+}
+/* CSS talk bubble */
+.talk-bubble {
+  margin: 40px;
+  margin-left: 700px;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: auto;
 
-  right: 0;
-}
-.panel {
-  background-color:white;
-  /*border: 1px solid rgba(0, 0, 0, 0);*/
-  border-radius: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
-}
-.panel-danger {
-  border-color: #428BCA;
+  background-color: gray;
 }
 .row{
   text-align: center;
@@ -25,14 +24,45 @@
   margin-bottom: 200px;
   text-align: center;
 }
+.round{
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+
+}
+/* Right triangle, right side slightly down*/
+.tri-right.border.right-in:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -40px;
+  top: 30px;
+  bottom: auto;
+  border: 20px solid;
+  border-color: #666 transparent transparent #666;
+}
+.tri-right.right-in:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -20px;
+  top: 38px;
+  bottom: auto;
+  border: 12px solid;
+  border-color: gray transparent transparent gray;
+}
 
 #colOne, #colTwo,#colThree,#colFour,#colFive{
   padding-top: 10px;
-  margin-left: 40px;
+  margin-left: 33px;
   text-align: center;
 }
 #footer{
-  padding-top: 10px;
-  margin-left: 40px;
+  padding-top: 80px;
+  margin:auto;
   text-align: center;
 }
