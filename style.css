@@ -6,17 +6,8 @@ html, body {
   background-clip: border-box;
   text-align-last: right;
 }
-/* CSS talk bubble */
-.talk-bubble {
-  margin: 40px;
-  margin-left: 700px;
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: auto;
 
-  background-color: gray;
-}
+
 .row{
   text-align: center;
 }
@@ -24,37 +15,102 @@ html, body {
   margin-bottom: 200px;
   text-align: center;
 }
-.round{
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
 
+.triangle-right {
+	position:relative;
+	padding:15px;
+	margin:1em 0 3em;
+	color:#fff;
+	background:gray; /* default background for browsers without gradient support */
+	/* css3 */
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+	background:-moz-linear-gradient(#2e88c4, #075698);
+	background:-o-linear-gradient(#2e88c4, #075698);
+	background:linear-gradient(#2e88c4, #075698);
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
 }
-/* Right triangle, right side slightly down*/
-.tri-right.border.right-in:before {
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: auto;
-  right: -40px;
-  top: 30px;
-  bottom: auto;
-  border: 20px solid;
-  border-color: #666 transparent transparent #666;
+
+/* Variant : for top positioned triangle
+------------------------------------------ */
+
+.triangle-right.top {
+  background: gray;
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#075698), to(#2e88c4));
+	background:-moz-linear-gradient(#075698, #2e88c4);
+	background:-o-linear-gradient(#075698, #2e88c4);
+	background:linear-gradient(#075698, #2e88c4);
 }
-.tri-right.right-in:after{
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: auto;
-  right: -20px;
-  top: 38px;
-  bottom: auto;
-  border: 12px solid;
-  border-color: gray transparent transparent gray;
+
+/* Variant : for left positioned triangle
+------------------------------------------ */
+
+.triangle-right.left {
+	margin-left:401px;
+	background:gray;
 }
+
+/* Variant : for right positioned triangle
+------------------------------------------ */
+
+.triangle-right.right {
+	margin-right:40px;
+	background:gray;
+}
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-right:after {
+	content:"";
+	position:absolute;
+	bottom:-20px; /* value = - border-top-width - border-bottom-width */
+	left:50px; /* controls horizontal position */
+	border-width:20px 0 0 20px; /* vary these values to change the angle of the vertex */
+	border-style:solid;
+	border-color:#075698 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+/* Variant : top
+------------------------------------------ */
+
+.triangle-right.top:after {
+	top:-20px; /* value = - border-top-width - border-bottom-width */
+	right:50px; /* controls horizontal position */
+	bottom:auto;
+	left:auto;
+	border-width:20px 20px 0 0; /* vary these values to change the angle of the vertex */
+	border-color:transparent #075698;
+}
+
+/* Variant : left
+------------------------------------------ */
+
+.triangle-right.left:after {
+	top:16px;
+	left:-40px; /* value = - border-left-width - border-right-width */
+	bottom:auto;
+	border-width:15px 40px 0 0; /* vary these values to change the angle of the vertex */
+	border-color:transparent #075698;
+}
+
+/* Variant : right
+------------------------------------------ */
+
+.triangle-right.right:after {
+	top:16px;
+	right:-40px; /* value = - border-left-width - border-right-width */
+	bottom:auto;
+    left:auto;
+	border-width:15px 0 0 40px; /* vary these values to change the angle of the vertex */
+	border-color:transparent gray ;
+}
+
+
 
 #colOne, #colTwo,#colThree,#colFour,#colFive{
   padding-top: 10px;
