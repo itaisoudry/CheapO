@@ -14,41 +14,60 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
   <div class="header" id="header">
-  <p>ברוכים הבאים למחולל התירוצים של קמצן מורשה!</p>
-  <p>המחולל היחיד שייתן לכם את התירוץ המושלים להתחמקות מחתונה, ללא הבדל דת,גזע ומין.</p>
-  <p>השלימו למטה את סטטוס מצבכם ואנחנו נפיק לכם תירוץ מתאים.</p>
+    <p>ברוכים הבאים למחולל התירוצים של קמצן מורשה!</p>
+    <p>המחולל היחיד שייתן לכם את התירוץ המושלים להתחמקות מחתונה, ללא הבדל דת,גזע ומין.</p>
+    <p>השלימו למטה את סטטוס מצבכם ואנחנו נפיק לכם תירוץ מתאים.</p>
 
 
   </div>
   <div class="row">
-    <div class="col-md-4" id="colOne">
-      <div id="pickOne">
-        <select class="selectpicker">
-          <option>1</option>
-          <option>Ketchup</option>
-          <option>Relish</option>
-        </select>
+    <form role="form" class="form-inline">
+      <div class="col-sm-2" id="colOne">מין
+        <div id="pickOne">
+          <select class="selectpicker" style="width:auto;" class="form-control selectWidth">
+            <option>1</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-2" id="colTwo">גיל
+        <div id="pickTwo">
+          <select class="selectpicker" style="width:auto;" class="form-control selectWidth">
+            <option>2</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-2" id="colThree">איזור מגורים
+        <div id="pickThree">
+          <select class="selectpicker" style="width:auto;" class="form-control selectWidth">
+            <option>3</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-2" id="colFour">סטטוס
+        <div id="pickFour">
+          <select class="selectpicker" style="width:auto;" class="form-control selectWidth">
+            <option>4</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-2" id="colFive">רמת קירבה
+        <div id="pickFive">
+          <select class="selectpicker" style="width:auto;" class="form-control selectWidth">
+            <option>5</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
+        </div>
       </div>
     </div>
-    <div class="col-md-4" id="colTwo">
-      <div id="pickTwo">
-        <select class="selectpicker">
-          <option>2</option>
-          <option>Ketchup</option>
-          <option>Relish</option>
-        </select>
-      </div>
-    </div>
-    <div class="col-md-4" id="colThree">
-      <div id="pickThree">
-        <select class="selectpicker">
-          <option>3</option>
-          <option>Ketchup</option>
-          <option>Relish</option>
-        </select>
-      </div>
-    </div>
-  </div>
-
+  </form>
 </body>
 </html>
