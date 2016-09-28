@@ -11,12 +11,17 @@ html, body {
 .row{
   text-align: center;
 }
+.photo{
+  margin-right: 150px;
+  float: right;
+}
 .header{
   margin-bottom: 200px;
   text-align: center;
 }
 
 .triangle-right {
+  display: inline-table;
 	position:relative;
 	padding:15px;
 	margin:1em 0 3em;
