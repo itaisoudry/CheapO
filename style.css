@@ -5,12 +5,13 @@ html, body {
 .bootstrap-select {
   background-clip: border-box;
   text-align-last: right;
+  margin-right: 5px;
 }
 
 
 .row{
   text-align: center;
-  margin-right: 15px;
+  margin-right: 14px;
 }
 .card{
   border-color: red;
