@@ -7,9 +7,8 @@ html, body {
   text-align-last: right;
   margin-right: 5px;
 }
-label {
-  text-align: center;
-margin-left: 35px;
+label,select{
+  display: block;
 }
 .row{
   text-align: center;
