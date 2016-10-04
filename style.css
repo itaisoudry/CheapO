@@ -20,7 +20,9 @@ html, body {
   margin-bottom: 30px;
   text-align: center;
 }
-
+#card-block{
+  margin-top: 20px;
+}
 #colOne, #colTwo,#colThree,#colFour,#colFive{
   padding-top: 10px;
   margin-left: 30px;

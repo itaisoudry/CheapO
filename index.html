@@ -29,7 +29,7 @@
   </div>
   <div class="row" id="select-container">
     <form role="form" class="form-inline">
-      <div class="col-sm-2" id="colOne">מין
+      <div style="font-family:gisha" class="col-sm-2" id="colOne">מין
         <div id="pickOne">
           <select class="selectpicker" data-style="btn-inverse">
             <option>זכר</option>
@@ -37,7 +37,7 @@
           </select>
         </div>
       </div>
-      <div class="col-sm-2" id="colTwo">גיל
+      <div style="font-family:gisha" class="col-sm-2" id="colTwo">גיל
         <div id="pickTwo">
           <select class="selectpicker" data-style="btn-inverse">
             <option>1-21</option>
@@ -46,7 +46,7 @@
           </select>
         </div>
       </div>
-      <div class="col-sm-2" id="colThree">איזור מגורים
+      <div style="font-family:gisha" class="col-sm-2" id="colThree">איזור מגורים
         <div id="pickThree">
           <select class="selectpicker" data-style="btn-inverse">
             <option disabled></option>
@@ -56,7 +56,7 @@
           </select>
         </div>
       </div>
-      <div class="col-sm-2" id="colFour">סטטוס
+      <div style="font-family:gisha" class="col-sm-2" id="colFour">סטטוס
         <div id="pickFour">
           <select class="selectpicker" data-style="btn-inverse">
             <option>שכיר</option>
@@ -67,7 +67,7 @@
           </select>
         </div>
       </div>
-      <div class="col-sm-2" id="colFive">רמת קירבה
+      <div style="font-family:gisha" class="col-sm-2" id="colFive">רמת קירבה
         <div id="pickFive">
           <select class="selectpicker" data-style="btn-inverse">
             <option>משפחה - דרגה ראשונה</option>
@@ -82,18 +82,19 @@
     </form>
   </div>
 
-  <div id="footer">
+  <div id="footer" style="font-family:gisha">
     <button type="button" class="btn btn-danger" onclick=document.getElementById("resultSentence").innerHTML=getSentence()>!תן לי תירוץ</button>
   </div>
-  <div class="card card-outline-primary text-xs-center">
-    <div class="card-block">
+  <div class="card card-outline-primary text-xs-center" style="font-family:gisha">
+    <div class="card-block" id='card-block'>
       <blockquote class="card-blockquote">
-        <p>
+        <p id='resultSentence'>
           תירוץ כלשהו שקשור לקמצנות וחתונה
         </p>
       </blockquote>
     </div>
   </div>
+  <div class="row" id="copyright">&copy; Itai Soudry - Authorized Cheap developer</div>
 
 
 </body>
