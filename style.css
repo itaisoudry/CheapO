@@ -21,6 +21,7 @@ html, body {
 
 #colOne, #colTwo,#colThree,#colFour,#colFive{
   padding-top: 10px;
+  margin-left: 20px;
   text-align: center;
 }
 #footer{
