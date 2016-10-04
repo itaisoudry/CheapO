@@ -20,7 +20,10 @@ html, body {
   margin-bottom: 30px;
   text-align: center;
 }
-#card-block{
+#copy-right{
+  text-align: center;
+}
+#resultSentence{
   margin-top: 20px;
 }
 #colOne, #colTwo,#colThree,#colFour,#colFive{
