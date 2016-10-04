@@ -25,85 +25,94 @@
     <p lang="he" style="font-family:gisha; font-size=20px">ברוכים הבאים למחולל התירוצים של קמצן מורשה!</p>
     <p lang="he" style="font-family:gisha">המחולל היחיד שייתן לכם את התירוץ המושלם להתחמקות מחתונה ללא הבדל דת, גזע ומין.</p>
     <p lang="he" style="font-family:gisha">השלימו למטה את ססטוס מצבכם ואנחנו נפיק לכם את התירוץ המתאים!</p>
-
   </div>
   <div class="row" id="select-container">
     <form role="form" class="form-inline">
       <div style="font-family:gisha" class="col-sm-2" id="colOne">
-      <label>מין</label>
-        <div id="pickOne">
-          <select class="selectpicker" data-style="btn-inverse">
-            <label>test</label>
-            <option>זכר</option>
-            <option>נקבה</option>
-          </select>
-        </div>
+        <span style="display:inline-block">
+          <label>מין</label><br />
+          <div id="pickOne">
+            <select class="selectpicker" data-style="btn-inverse">
+              <label>test</label>
+              <option>זכר</option>
+              <option>נקבה</option>
+            </select>
+          </div>
+        </span>
       </div>
+
       <div style="font-family:gisha" class="col-sm-2" id="colTwo">
-        <label>גיל</label>
-        <div id="pickTwo">
-          <select class="selectpicker" data-style="btn-inverse">
-            <option>1-21</option>
-            <option>22-35</option>
-            <option>36-100</option>
-          </select>
-        </div>
+        <span style="display:inline-block">
+          <label>גיל</label><br />
+          <div id="pickTwo">
+            <select class="selectpicker" data-style="btn-inverse">
+              <option>1-21</option>
+              <option>22-35</option>
+              <option>36-100</option>
+            </select>
+          </div>
+        </span>
       </div>
       <div style="font-family:gisha" class="col-sm-2" id="colThree">
-        <label>איזור מגורים</label>
-        <div id="pickThree">
-          <select class="selectpicker" data-style="btn-inverse">
-            <option disabled></option>
-            <option>מרכז</option>
-            <option>צפון</option>
-            <option>דרום</option>
-          </select>
-        </div>
+        <span style="display:inline-block">
+          <label>איזור מגורים</label><br />
+          <div id="pickThree">
+            <select class="selectpicker" data-style="btn-inverse">
+              <option disabled></option>
+              <option>מרכז</option>
+              <option>צפון</option>
+              <option>דרום</option>
+            </select>
+          </div>
+        </span>
       </div>
+
       <div style="font-family:gisha" class="col-sm-2" id="colFour">
-        <label>סטטוס</label>
-        <div id="pickFour">
-          <select class="selectpicker" data-style="btn-inverse">
-            <option>שכיר</option>
-            <option>עצמאי</option>
-            <option>מובטל</option>
-            <option>סטודנט</option>
-            <option>לא עובד - עובדים בשבילי</option>
-          </select>
-        </div>
+        <span style="display:inline-block">
+          <label>סטטוס</label><br />
+          <div id="pickFour">
+            <select class="selectpicker" data-style="btn-inverse">
+              <option>שכיר</option>
+              <option>עצמאי</option>
+              <option>מובטל</option>
+              <option>סטודנט</option>
+              <option>לא עובד - עובדים בשבילי</option>
+            </select>
+          </div>
+        </span>
       </div>
-      <form>
+
       <div style="font-family:gisha" class="col-sm-2" id="colFive">
-        <label id="five">רמת קירבה</label>
         <div id="pickFive">
-          <select class="selectpicker" data-style="btn-inverse">
-            <option>משפחה - דרגה ראשונה</option>
-            <option>משפחה - דרגה שניה</option>
-            <option>חבר</option>
-            <option>מכר</option>
-            <option>קולגה</option>
-            <option>שלום שלום בשכונה</option>
-          </select>
+          <span style="display:inline-block">
+            <label id="five">רמת קירבה</label><br />
+            <select class="selectpicker" data-style="btn-inverse">
+              <option>משפחה - דרגה ראשונה</option>
+              <option>משפחה - דרגה שניה</option>
+              <option>חבר</option>
+              <option>מכר</option>
+              <option>קולגה</option>
+              <option>שלום שלום בשכונה</option>
+            </select>
+          </span>
         </div>
       </div>
-      </form>
-    </form>
-  </div>
-
-  <div id="footer" style="font-family:gisha">
-    <button type="button" class="btn btn-danger" onclick=document.getElementById("resultSentence").innerHTML=getSentence()>!תן לי תירוץ</button>
-  </div>
-  <div class="card card-outline-primary text-xs-center" id='card-border' style="font-family:gisha">
-    <div class="card-block" >
-      <blockquote class="card-blockquote">
-        <p id='resultSentence'>
-          תירוץ כלשהו שקשור לקמצנות וחתונה
-        </p>
-      </blockquote>
     </div>
-  </div>
-  <div class="row" id="copyright">&copy; Itai Soudry - Authorized Cheap developer</div>
+
+    <div id="footer" style="font-family:gisha">
+      <button type="button" class="btn btn-danger" onclick=document.getElementById("resultSentence").innerHTML=getSentence()>!תן לי תירוץ</button>
+    </div>
+    <div class="card card-outline-primary text-xs-center" id='card-border' style="font-family:gisha">
+      <div class="card-block" >
+        <blockquote class="card-blockquote">
+          <p id='resultSentence'>
+            תירוץ כלשהו שקשור לקמצנות וחתונה
+          </p>
+        </blockquote>
+      </div>
+    </div>
+    <div class="row" id="copyright">&copy; Itai Soudry - Authorized Cheap developer</div>
 
 
-</body>
-</html>
+  </body>
+  </html>

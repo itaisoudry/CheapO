@@ -7,9 +7,6 @@ html, body {
   text-align-last: right;
   margin-right: 5px;
 }
-label,select{
-  display: block;
-}
 .row{
   text-align: center;
   margin-right: 14px;
@@ -25,9 +22,6 @@ label,select{
   text-align: center;
   margin: auto;
   padding-top:2px;
-}
-#gender-headline{
-  padding-left: 100px;
 }
 #copy-right{
   text-align: center;
