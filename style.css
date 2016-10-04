@@ -2,6 +2,9 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+label {
+  display:block; width:auto; height:auto; text-align:center;
+}
 .bootstrap-select {
   background-clip: border-box;
   text-align-last: right;
