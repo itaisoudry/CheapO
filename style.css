@@ -20,11 +20,14 @@ html, body {
   margin-bottom: 30px;
   text-align: center;
 }
+.card-blockquote{
+  text-align: center;
+}
 #copy-right{
   text-align: center;
 }
 #resultSentence{
-  margin-top: 20px;
+  margin: auto;
 }
 #colOne, #colTwo,#colThree,#colFour,#colFive{
   padding-top: 10px;
