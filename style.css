@@ -3,7 +3,7 @@ html, body {
   overflow-x: hidden;
 }
 label {
-  display:block; width:auto; height:auto; text-align:center;
+  display:inline-block; text-align:center;
 }
 .bootstrap-select {
   background-clip: border-box;
