@@ -23,12 +23,13 @@ html, body {
 .card-blockquote{
   text-align: center;
   margin: auto;
+  padding-top:2px;
 }
 #copy-right{
   text-align: center;
 }
 #resultSentence{
-  margin-top: 30px;
+  margin: auto;
 }
 #colOne, #colTwo,#colThree,#colFour,#colFive{
   padding-top: 10px;
