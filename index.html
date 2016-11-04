@@ -22,7 +22,8 @@
   <div class="header" id="header" style="direction: rtl">
     <img src="logo.webp" width=250px/>
     <br /><br />
-    <p lang="he" style="font-family:gisha; font-size=20px">ברוכים הבאים למחולל התירוצים של קמצן מורשה!</p>
+    <!--TODO: Add small margins from left and right - for the third paragraph-->
+    <p lang="he" style="font-family:gisha; font-size=22px"><b>ברוכים הבאים למחולל התירוצים של קמצן מורשה</b></p>
     <p lang="he" style="font-family:gisha">המחולל היחיד שייתן לכם את התירוץ המושלם להתחמקות מחתונה ללא הבדל דת, גזע ומין.</p>
     <p lang="he" style="font-family:gisha">השלימו למטה את ססטוס מצבכם ואנחנו נפיק לכם את התירוץ המתאים!</p>
   </div>
@@ -32,7 +33,7 @@
         <span style="display:inline-block">
           <label><b>מין</b></label><br />
           <div id="pickOne">
-            <select class="selectpicker" data-style="btn-inverse">
+            <select id="selectOne" class="selectpicker" data-style="btn-inverse">
               <label>test</label>
               <option value="male">זכר</option>
               <option value="female">נקבה</option>
@@ -45,7 +46,7 @@
         <span style="display:inline-block">
           <label><b>גיל</b></label><br />
           <div id="pickTwo">
-            <select class="selectpicker" data-style="btn-inverse">
+            <select id="selectTwo" class="selectpicker" data-style="btn-inverse">
               <option value="1">1-21</option>
               <option value="2">22-35</option>
               <option value="3">36-100</option>
@@ -57,7 +58,7 @@
         <span style="display:inline-block">
           <label><b>איזור מגורים</b></label><br />
           <div id="pickThree">
-            <select class="selectpicker" data-style="btn-inverse">
+            <select id="selectThree" class="selectpicker" data-style="btn-inverse">
               <option disabled></option>
               <option value="2">מרכז</option>
               <option value="1">צפון</option>
@@ -67,27 +68,27 @@
         </span>
       </div>
 
-      <div style="font-family:gisha" class="col-sm-2" id="colFive">
-        <div id="pickFive">
+      <div style="font-family:gisha" class="col-sm-2" id="colFour">
+        <div id="pickFour">
           <span style="display:inline-block">
-            <label id="five"><b>רמת קירבה</b></label><br />
-            <select class="selectpicker" data-style="btn-inverse">
-              <option>משפחה - דרגה ראשונה</option>
-              <option>משפחה - דרגה שניה</option>
-              <option>חבר</option>
-              <option>מכר</option>
-              <option>קולגה</option>
-              <option>שלום שלום בשכונה</option>
+            <label id="four"><b>רמת קירבה</b></label><br />
+            <select id="selectFour" class="selectpicker" data-style="btn-inverse">
+              <option value="4">משפחה - דרגה ראשונה</option>
+              <option value="3">משפחה - דרגה שניה</option>
+              <option value="5">חבר</option>
+              <option value="3">מכר</option>
+              <option value="3">קולגה</option>
+              <option value="1"  >שלום שלום בשכונה</option>
             </select>
           </span>
         </div>
       </div>
 
-      <div style="font-family:gisha" class="col-sm-2" id="colFour">
+      <div style="font-family:gisha" class="col-sm-2" id="colFive">
         <span style="display:inline-block">
           <label><b>סטטוס</b></label><br />
-          <div id="pickFour">
-            <select class="selectpicker" data-style="btn-inverse">
+          <div id="pickFive">
+            <select id="selectFive" class="selectpicker" data-style="btn-inverse">
               <option value="1">שכיר</option>
               <option value="2">עצמאי</option>
               <option value="4">מובטל</option>
@@ -100,7 +101,10 @@
     </div>
 
     <div id="footer" style="font-family:gisha">
-      <button type="button" class="btn btn-danger" style="color:black" onclick=document.getElementById("resultSentence").innerHTML=getSentence()><b>!תן לי תירוץ</b></button>
+      <button type="button" class="btn btn-danger" style="color:black"
+            onclick=document.getElementById("resultSentence").innerHTML=getSentence()>
+              <b>!תן לי תירוץ</b>
+      </button>
     </div>
     <div class="card card-outline-primary text-xs-center" id='card-border' style="font-family:gisha">
       <div class="card-block" >
@@ -112,7 +116,7 @@
       </div>
     </div>
     <div class="row" id="copyright">&copy; Itai Soudry - Authorized Cheap developer</div>
-
+    <!--Authorized cheap'o! don't copy, unless you are a cheap bastard, and in that case,  feel free to copy. -->
 
   </body>
   </html>
