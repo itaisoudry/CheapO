@@ -88,6 +88,7 @@ function getSentence(){
       number = Math.floor(Math.random() * getLength(gender));
     }
   }
+  console.log('final ' +gender);
   if(gender=='male'){
     return maleSentences[number];
   }
