@@ -72,27 +72,64 @@ var femaleSentences=["אני כל החודש במילואים",
 "אני בויפאסנה",
 "יש לי אלרגיה קשה למוסיקה מזרחית"
 ];
-
+var lastAge,lastGender,lastLocation,lastStatus,lastRelation,lastSentence="";
 function getSentence(){
   var selectOne = document.getElementById("selectOne");
   var gender =selectOne.options[selectOne.selectedIndex].value;
   var selectTwo = document.getElementById("selectTwo");
   var age =selectTwo.options[selectTwo.selectedIndex].value;
+  var selectThree = document.getElementById("selectThree");
+  var location=selectThree.options[selectThree.selectedIndex].value;
   var selectFour = document.getElementById("selectFour");
-  var status =selectFour.options[selectFour.selectedIndex].value;
+  var relation =selectFour.options[selectFour.selectedIndex].value;
+  var selectFive = document.getElementById("selectFive");
+  var status =selectFive.options[selectFive.selectedIndex].value;
   var number=0;
-  console.log(age);
+  var sentence="";
+
+  console.log("gender " +gender+", age "+age+", location " +location+", relation "+relation+", status "+status);
+  console.log("lastGender " +lastGender+", lastAge "+lastAge+", lastLocation " +lastLocation+", lastRelation "+lastRelation+", lastStatus "+lastStatus);
+  //Really stupid logic :D
   if(age==1){
     number = Math.floor(Math.random() * getLength(gender));
     while(number<5){
       number = Math.floor(Math.random() * getLength(gender));
     }
+  }else{
+    number = Math.floor(Math.random() * getLength(gender));
   }
-  console.log('final ' +gender);
   if(gender=='male'){
-    return maleSentences[number];
+    sentence=maleSentences[number];
+  }else{
+    sentence=femaleSentences[number];
   }
-  return femaleSentences[number];
+  console.log("checkLastSentence");
+  if(checkLastSentence(gender,age,location,relation,status)==true){
+    console.log("true");
+    if(lastSentence!=""){
+      sentence=lastSentence;
+    }
+  }else{
+    console.log("false");
+    lastSentence=sentence;
+  }
+  updateLastChoice(gender,age,location,relation,status);
+  return sentence;
+}
+
+function checkLastSentence(gender,age,location,relation,status){
+  if(gender==lastGender && age==lastAge && location==lastLocation && relation==lastRelation && status==lastStatus){
+    return true;
+  }
+  return false;
+}
+function updateLastChoice(gender,age,location,relation,status){
+  //Update last choice
+  lastGender = gender;
+  lastAge=age;
+  lastLocation=location;
+  lastStatus=status;
+  lastRelation=relation;
 }
 function getLength(gender){
   console.log('log ' + gender);
