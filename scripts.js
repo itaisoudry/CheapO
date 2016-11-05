@@ -8,9 +8,16 @@ of something like that.
 
 Hope you enjoy!
 
-Itai.
+Itai - Authorized Cheap Developer.
 
 **/
+
+
+
+
+
+
+
 
 
 
@@ -87,8 +94,6 @@ function getSentence(){
   var number=0;
   var sentence="";
 
-  console.log("gender " +gender+", age "+age+", location " +location+", relation "+relation+", status "+status);
-  console.log("lastGender " +lastGender+", lastAge "+lastAge+", lastLocation " +lastLocation+", lastRelation "+lastRelation+", lastStatus "+lastStatus);
   //Really stupid logic :D
   if(age==1){
     number = Math.floor(Math.random() * getLength(gender));
@@ -105,15 +110,14 @@ function getSentence(){
   }
   console.log("checkLastSentence");
   if(checkLastSentence(gender,age,location,relation,status)==true){
-    console.log("true");
     if(lastSentence!=""){
       sentence=lastSentence;
     }
   }else{
-    console.log("false");
     lastSentence=sentence;
   }
   updateLastChoice(gender,age,location,relation,status);
+  goToButtom();
   return sentence;
 }
 
@@ -123,6 +127,7 @@ function checkLastSentence(gender,age,location,relation,status){
   }
   return false;
 }
+
 function updateLastChoice(gender,age,location,relation,status){
   //Update last choice
   lastGender = gender;
@@ -131,10 +136,17 @@ function updateLastChoice(gender,age,location,relation,status){
   lastStatus=status;
   lastRelation=relation;
 }
+
 function getLength(gender){
   console.log('log ' + gender);
   if(gender=='male'){
     return maleSentences.length;
   }
   return femaleSentences.length;
+}
+
+function goToButtom(){
+  var documentHeight=document.documentElement.offsetHeight;
+  var viewportHeight=window.innerHeight;
+  window.scrollTo(0,documentHeight-viewportHeight);
 }
