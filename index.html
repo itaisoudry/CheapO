@@ -27,9 +27,10 @@
     <p lang="he" style="font-family:gisha">המחולל היחיד שייתן לכם את התירוץ המושלם להתחמקות מחתונה ללא הבדל דת, גזע ומין.</p>
     <p lang="he" style="font-family:gisha">השלימו למטה את ססטוס מצבכם ואנחנו נפיק לכם את התירוץ המתאים!</p>
   </div>
-  <div class="row" id="select-container">
-    <form role="form" class="form-inline">
-      <div style="font-family:gisha" class="col-sm-2" id="colOne">
+  <div class="container-fluid">
+  <div class="row row-centered" id="select-container">
+
+      <div style="font-family:gisha" class="col-xs-6 col-centered" id="colOne">
         <span style="display:inline-block">
           <label><b>מין</b></label><br />
           <div id="pickOne">
@@ -42,7 +43,7 @@
         </span>
       </div>
 
-      <div style="font-family:gisha" class="col-sm-2" id="colTwo">
+      <div style="font-family:gisha" class="col-xs-6 col-centered" id="colTwo">
         <span style="display:inline-block">
           <label><b>גיל</b></label><br />
           <div id="pickTwo">
@@ -55,7 +56,7 @@
           </div>
         </span>
       </div>
-      <div style="font-family:gisha" class="col-sm-2" id="colThree">
+      <div style="font-family:gisha" class="col-xs-6 col-centered" id="colThree">
         <span style="display:inline-block">
           <label><b>איזור מגורים</b></label><br />
           <div id="pickThree">
@@ -69,7 +70,7 @@
         </span>
       </div>
 
-      <div style="font-family:gisha" class="col-sm-2" id="colFour">
+      <div style="font-family:gisha" class="col-xs-6 col-centered" id="colFour">
         <div id="pickFour">
           <span style="display:inline-block">
             <label id="four"><b>רמת קירבה</b></label><br />
@@ -86,7 +87,7 @@
         </div>
       </div>
 
-      <div style="font-family:gisha" class="col-sm-2" id="colFive">
+      <div style="font-family:gisha" class="col-xs-6 col-centered" id="colFive">
         <span style="display:inline-block">
           <label><b>סטטוס מקצועי</b></label><br />
           <div id="pickFive">
@@ -102,7 +103,7 @@
         </span>
       </div>
     </div>
-
+</div>
     <div id="footer" style="font-family:gisha">
       <button type="button" class="btn btn-danger" style="color:black"
       onclick=document.getElementById("resultSentence").innerHTML=getSentence()>
