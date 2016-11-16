@@ -34,7 +34,7 @@
           <label><b>מין</b></label><br />
           <div id="pickOne">
             <select id="selectOne" class="selectpicker" data-style="btn-inverse">
-              <label>test</label>
+              <option value="100">בחר</option>
               <option value="male">זכר</option>
               <option value="female">נקבה</option>
             </select>
@@ -47,6 +47,7 @@
           <label><b>גיל</b></label><br />
           <div id="pickTwo">
             <select id="selectTwo" class="selectpicker" data-style="btn-inverse">
+              <option value="100">בחר</option>
               <option value="1">1-21</option>
               <option value="2">22-35</option>
               <option value="3">36-100</option>
@@ -59,7 +60,7 @@
           <label><b>איזור מגורים</b></label><br />
           <div id="pickThree">
             <select id="selectThree" class="selectpicker" data-style="btn-inverse">
-              <option disabled></option>
+              <option value="100">בחר</option>
               <option value="2">מרכז</option>
               <option value="1">צפון</option>
               <option value="1">דרום</option>
@@ -73,6 +74,7 @@
           <span style="display:inline-block">
             <label id="four"><b>רמת קירבה</b></label><br />
             <select id="selectFour" class="selectpicker" data-style="btn-inverse">
+              <option value="100">בחר</option>
               <option value="4">משפחה - דרגה ראשונה</option>
               <option value="3">משפחה - דרגה שניה</option>
               <option value="5">חבר</option>
@@ -89,6 +91,7 @@
           <label><b>סטטוס מקצועי</b></label><br />
           <div id="pickFive">
             <select id="selectFive" class="selectpicker" data-style="btn-inverse">
+              <option value="100">בחר</option>
               <option value="1">שכיר</option>
               <option value="2">עצמאי</option>
               <option value="4">מובטל</option>
@@ -102,21 +105,20 @@
 
     <div id="footer" style="font-family:gisha">
       <button type="button" class="btn btn-danger" style="color:black"
-            onclick=document.getElementById("resultSentence").innerHTML=getSentence()>
-              <b>!תן לי תירוץ</b>
-      </button>
+      onclick=document.getElementById("resultSentence").innerHTML=getSentence()>
+      <b>!תן לי תירוץ</b>
+    </button>
+  </div>
+  <div class="card card-outline-primary text-xs-center" id='card-border' style="font-family:gisha">
+    <div class="card-block" >
+      <blockquote class="card-blockquote">
+        <p id='resultSentence'>
+        </p>
+      </blockquote>
     </div>
-    <div class="card card-outline-primary text-xs-center" id='card-border' style="font-family:gisha">
-      <div class="card-block" >
-        <blockquote class="card-blockquote">
-          <p id='resultSentence'>
-            תירוץ כלשהו שקשור לקמצנות וחתונה
-          </p>
-        </blockquote>
-      </div>
-    </div>
-    <div class="row" id="copyright">&copy; Itai Soudry - Authorized Cheap developer</div>
-    <!--Authorized cheap'o! don't copy, unless you are a cheap bastard, and in that case,  feel free to copy. -->
+  </div>
+  <div class="row" id="copyright">&copy; Itai Soudry - Authorized Cheap developer</div>
+  <!--Authorized cheap'o! don't copy, unless you are a cheap bastard, and in that case,  feel free to copy. -->
 
-  </body>
-  </html>
+</body>
+</html>

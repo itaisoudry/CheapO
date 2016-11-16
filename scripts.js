@@ -79,6 +79,8 @@ var femaleSentences=["אני כל החודש במילואים",
 "אני בויפאסנה",
 "יש לי אלרגיה קשה למוסיקה מזרחית"
 ];
+
+var errorMessage="לא ניתן לקבל תירוץ, אנא מלא את כל הפרטים";
 var lastAge,lastGender,lastLocation,lastStatus,lastRelation,lastSentence="";
 function getSentence(){
   var selectOne = document.getElementById("selectOne");
@@ -94,6 +96,9 @@ function getSentence(){
   var number=0;
   var sentence="";
 
+  if(validateFields(gender,age,location,relation,status)){
+    return errorMessage;
+  }
   //Really stupid logic :D
   if(age==1){
     number = Math.floor(Math.random() * getLength(gender));
@@ -120,7 +125,12 @@ function getSentence(){
   goToButtom();
   return sentence;
 }
-
+function validateFields(gender,age,location,relation,status){
+  if(gender+age+location+relation+status>=100){
+    return true;
+  }
+  return false;
+}
 function checkLastSentence(gender,age,location,relation,status){
   if(gender==lastGender && age==lastAge && location==lastLocation && relation==lastRelation && status==lastStatus){
     return true;
