@@ -38,6 +38,7 @@ label {
 }
 #select-container{
   display: inline-grid;
+
 }
 #copy-right{
   text-align: center;
@@ -50,7 +51,7 @@ label {
   margin-left: 30px;
   text-align: center;
 }
-#footer{
+#footer,#share{
   padding-top: 20px;
   padding-bottom: 30px;
   text-align: center;
