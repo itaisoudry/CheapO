@@ -164,8 +164,13 @@ function goToButtom(){
 
 
 function sharefbimage() {
+  
   FB.ui({
     method: 'share',
-    href: 'https://developers.facebook.com/docs/',
+    href: 'http://Weddings.kamtzan.org',
+    hashtag:'#test',
+    picture: 'https://github.com/itaisoudry/CheapO/blob/gh-pages/shareImg.jpg',
   }, function(response){});
+
+
 }
