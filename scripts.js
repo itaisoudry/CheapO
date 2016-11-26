@@ -164,11 +164,11 @@ function goToButtom(){
 
 
 function sharefbimage() {
-  
+
   FB.ui({
     method: 'share',
     href: 'http://Weddings.kamtzan.org',
-    hashtag:'#test',
+    hashtag:'#קמצן_מורשה',
     picture: 'https://github.com/itaisoudry/CheapO/blob/gh-pages/shareImg.jpg',
   }, function(response){});
 
