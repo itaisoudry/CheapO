@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta property="og:url"                content="http://Weddings.kamtzan.org" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+  <meta property="og:description"        content="How much does culture influence creative thinking?" />
+  <meta property="og:image"              content="https://github.com/itaisoudry/CheapO/blob/gh-pages/shareImg.jpg" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,6 +17,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
 </head>
 <body>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1162827390472646',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "http://connect.facebook.net/en_US/all.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
   <script type="text/javascript" src="scripts.js"></script>
   <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -29,7 +52,7 @@
   </div>
   <div class="container-fluid">
     <div class="row" id="select-container">
-    <!--used to be col-sm-2-->
+      <!--used to be col-sm-2-->
       <div style="font-family:gisha" class="col-md-12" id="colOne">
         <span style="display:inline-block">
           <label><b>מין</b></label><br />
@@ -109,6 +132,9 @@
     onclick=document.getElementById("resultSentence").innerHTML=getSentence()>
     <b>!תן לי תירוץ</b>
   </button>
+</div>
+<div id="share">
+  <button type="button" class="btn btn-success" onClick=sharefbimage()>Share</button>
 </div>
 <div class="card card-outline-primary text-xs-center" id='card-border' style="font-family:gisha">
   <div class="card-block" >

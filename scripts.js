@@ -160,3 +160,12 @@ function goToButtom(){
   var viewportHeight=window.innerHeight;
   window.scrollTo(0,documentHeight-viewportHeight);
 }
+
+
+
+function sharefbimage() {
+  FB.ui({
+    method: 'share',
+    href: 'https://developers.facebook.com/docs/',
+  }, function(response){});
+}
