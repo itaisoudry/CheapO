@@ -167,9 +167,9 @@ function sharefbimage() {
 
   FB.ui({
     method: 'share',
-    href: 'http://Weddings.kamtzan.org',
+    href: 'http://weddings.kamtzan.org',
     hashtag:'#קמצן_מורשה',
-    picture: 'https://github.com/itaisoudry/CheapO/blob/gh-pages/shareImg.jpg',
+    picture: 'http://weddings.kamtzan.org/shareImg.png',
   }, function(response){});
 
 
