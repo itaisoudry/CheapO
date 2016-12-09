@@ -20,7 +20,7 @@ Itai - Authorized Cheap Developer.
 
 
 
-
+var excludeUnempStudentIndi=[4,5];
 var maleSentences=["אני כל החודש במילואים",
 "אני בדיוק בנסיעת עסקים",
 "הבייביסיטר הבריזה לי",
@@ -28,7 +28,8 @@ var maleSentences=["אני כל החודש במילואים",
 "אני כל החודש במילואים",
 "אני בדיוק בנסיעת עסקים",
 "הבייביסיטר הבריזה לי",
-"כל החבר'ה מהעבודה הולכים, מישהו חייב להישאר זמין במשרד","החתול שלי תקע לי את המחשב על caps lock, אני חייב להכין את עבודת הסמסטר מחדש." ,//only student and exclude 1-21
+"כל החבר'ה מהעבודה הולכים, מישהו חייב להישאר זמין במשרד",
+"אני חייב להכין את עבודת הסמסטר מחדש, החתול שלי תקע לי את המחשב על קאפס לוק" ,//only student and exclude 1-21
 "אני בדיוק עובר גירושים קשים, אין לי כסף לחתונה", //exclude 1-21
 "אני לא מוכן לתמוך במוסד הנישואים.",
 "אני טס לראות את הזוהר הצפוני",
@@ -36,7 +37,7 @@ var maleSentences=["אני כל החודש במילואים",
 "זו בדיק העונה של שפעת העופות, אני לא יכול לבוא",
 "אני לא יכול לשתות, ותכלס למה לי לבוא מבלי לשתות",
 "?אני לא מונוגומיסט, יש מצב אני בא עם 8 בני זוג",
-"הייתי בא, אבל זה נופל לי בדיוק על פסטיבל Völkermord בגרמניה, אני טס",
+"הייתי בא, אבל זה נופל לי בדיוק על פסטיבל וולקרמורד בגרמינה, אני טס",
 "לא שמעת? אני טבעוני, החל מעוד שבוע… לא מסוגל לראות רצח של חיות",
 "אני בדיוק עושה צום לקראת ניקוי קיבה",
 "זה יוצא בדיוק על הניתוח שקבעתי לטיפול בציפורן החודרנית",
@@ -55,10 +56,10 @@ var femaleSentences=["אני כל החודש במילואים",
 "אני בדיוק בנסיעת עסקים",
 "הבייביסיטר הבריזה לי",
 "כל החבר'ה מהעבודה הולכים, מישהו חייב להישאר זמין במשרד",
-"החתול שלי תקע לי את המחשב על caps lock, אני חייבת להכין את עבודת הסמסטר מחדש",//only student
 "אני לא מוכנה לתמוך במוסד הנישואים",
 "אני טסה לראות את הזוהר הצפוני",
 "אני בדיוק עוברת  גירושים קשים, אין לי כסף לחתונה",
+"אני חייבת להכין את עבודת הסמסטר מחדש, החתול שלי תקע לי את המחשב על קאפס לוק",//only student
 "זו בדיק העונה של שפעת העופות, אני לא יכולה לבוא",
 "אני לא יכולה לשתות, ותכלס למה לי לבוא מבלי לשתות",
 "החתולה שלי חולה והיא משלשלת בכל הבית, אני לא יכולה להשאיר אותה לבד",
@@ -102,7 +103,8 @@ function getSentence(){
   //Really stupid logic :D
   if(age==1){
     number = Math.floor(Math.random() * getLength(gender));
-    while(number<5){
+    while(number<5 || !checkExclude(status,number)){
+    //  console.log(status+"|"+number);
       number = Math.floor(Math.random() * getLength(gender));
     }
   }else{
@@ -113,7 +115,7 @@ function getSentence(){
   }else{
     sentence=femaleSentences[number];
   }
-  console.log("checkLastSentence");
+  //console.log("checkLastSentence");
   if(checkLastSentence(gender,age,location,relation,status)==true){
     if(lastSentence!=""){
       sentence=lastSentence;
@@ -137,7 +139,18 @@ function checkLastSentence(gender,age,location,relation,status){
   }
   return false;
 }
-
+function checkExclude(status,number){
+  if(status==2 || status==4){
+    if(excludeUnempStudentIndi.contains(number)){
+      return false;
+    }
+  }
+  if(status==3){
+    if(number==8)
+    return true;
+  }
+  return true;
+}
 function updateLastChoice(gender,age,location,relation,status){
   //Update last choice
   lastGender = gender;
